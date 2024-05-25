@@ -1,0 +1,33 @@
+@model ProductModel
+
+@{
+     ViewData["Title"] = "Añadir Producto";
+}
+
+<div class="text-center">
+    <h1>Añadir Producto</h1>
+</div>
+
+<form asp-action="ProductAdd" asp-controller="Product">
+    <div class="form-floating mb-3">
+    <input type="text" class="form-control" placeholder="Escribe el Nombre">
+    <label for="floatingInput">Nombre del Producto</label>
+    </div>
+    <div class="form-floating mb-3">
+    <input type="text" class="form-control" placeholder="Escribe la Marca">
+    <label for="floatingInput">Marca del Producto</label>
+    </div>
+    <div class="form-floating mb-3">
+    <input type="text" class="form-control" placeholder="Escribe la Cantidad">
+    <label for="floatingInput">Cantidad del Producto</label>
+    </div>
+    <div class="form-floating mb-3">
+    <input type="text" class="form-control" placeholder="Escribe el Precio">
+    <label for="floatingInput">Precio del Producto</label>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Guardar</button>
+    <a class="btn btn-secundary" asp-action="Inventory" asp-controller="Product">
+        Regresar
+    </a>
+</form>
